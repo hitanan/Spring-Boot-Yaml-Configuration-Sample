@@ -1,0 +1,29 @@
+server:
+  port: 8086
+input:
+  apis:
+    -
+      name: Pet API
+      version: 1.0
+      description: Check PET
+      apiUrl: http://petstore.swagger.io/
+      swaggerUrl: http://petstore.swagger.io/v2/swagger.json
+    -
+      name: Pet API v2
+      version: 2.0
+      description: Check PET v2
+      apiUrl: http://petstore.swagger.io/
+      swaggerUrl: http://petstore.swagger.io/v2/swagger.json
+    -
+      name: Customer API AnNT
+      version: 1.0
+      description:  Customer API AnNT
+      apiUrl: http://localhost:8080/swagger/
+      swaggerUrl: http://localhost:8080/swagger/api/docs
+    -
+      name: CaoNT API
+      version: 1.0
+      description:  Customer API AnNT
+      apiUrl: http://192.168.100.132:8080/projectName-web/api/
+      swaggerUrl: http://192.168.100.132:8080/projectName-web/api/v1/api/docs
+      

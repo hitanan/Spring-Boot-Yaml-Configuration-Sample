@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Swagger API List</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style type="text/css">th { text-align: left; }</style>
+</head>
+<body style="max-width:980px;margin: 0 auto;overflow: hidden;">
+    <h1>Swagger API List</h1>
+    <table>
+    <tr><th>No.</th><th>API URL</th><th>Version</th><th>Description</th><th>Swagger Script</th><th>Swagger UI</th></tr>
+    <tr th:each="api,iter : ${apis}">
+    	<td><span th:text="${iter.count}"></span></td>
+    	<td><a th:href="${api.apiUrl}" th:text="${api.name}" target="_blank"></a></td>
+    	<td><span th:text="${api.version}"></span></td>
+    	<td><span th:text="${api.description}"></span></td>
+        <td><a th:href="${api.swaggerUrl}" th:text="'Swagger script'" target="_blank"></a></td>        
+        <td><a th:href="'api.html?url=' + ${api.swaggerUrl}" th:text="'Swagger UI'" target="_blank"></a></td>
+    </tr>
+    </table>
+</body>
+</html>
